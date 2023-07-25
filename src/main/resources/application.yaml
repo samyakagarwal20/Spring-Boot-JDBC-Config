@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/pracDB?useSSL=false
+    username: root
+    password: password
+  jpa:
+    properties:
+      hibernate:
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update    # it updates the existing tables and creates new if they don't exist in the database.
+                          # For example - if we create a new column, then the corresponding table is updated instead of creating a new one
+                          # For production - its value should be validate/ create/ drop
