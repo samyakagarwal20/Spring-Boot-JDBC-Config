@@ -1,7 +1,7 @@
 # Spring-Boot-JDBC-Config
 It is a sample spring boot application to demonstrate the JDBC related configuration setup
 
-### NOTE :
+### Prequisites :
 
 ---
 Please make sure to have an active instance of MySQL DB running on your system before starting the application.
@@ -24,3 +24,13 @@ We can do it either by using MySQL Workbench or by executing the following comma
 This command prompts for the root password which we specified at the time of running the container. After entering the correct credentials, we get the access to the mysql client where we can execute the SQL query as ```create database pracDB```
 
 We could also create the database with some other name but make sure to change the **spring.datasource.url** property accordingly in application.yaml file.
+
+---
+In this method, we have explicitly defined a datasource and a corresponding JdbcTemplate object to perform the setup by referring to the properties defined in the application.yaml file.
+
+The configuration are done within the file J**DBCConfig.java**
+
+---
+### Last Step:
+
+Before running the application, please locate the **USER.sql** file present in the root directory and execute the command either on your mysql client ar directly onto the MySQL workbench (the steps for accessing which are already present above)
